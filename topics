@@ -1,0 +1,63 @@
+<Steps>
+  <Step subtitle="Write file" title="Save the README to Your Repository">
+    Run this command in your terminal to create and populate `README.md`:
+
+    ```bash
+    cat << 'EOF' > README.md
+    # Git Learning & Version Control Practice
+
+    A practice repository created on Ubuntu to learn basic Git concepts, workflow, and terminal commands.
+
+    ## Topics Covered
+    * Initializing a Git repository (`git init`)
+    * Checking repository status (`git status`)
+    * Tracking and staging changes (`git add`)
+    * Committing snapshots locally (`git commit`)
+    * Connecting to remote repositories on GitHub (`git remote add`)
+    * Pushing local commits to GitHub (`git push`)
+
+    ## Prerequisites
+    * Linux/Ubuntu terminal environment
+    * Git installed (`git --version`)
+    * A GitHub account and Personal Access Token (PAT) for HTTPS authentication
+
+    ## Basic Workflow
+    1. **Check status:**
+       ```bash
+       git status
+       ```
+    2. **Stage modified/new files:**
+       ```bash
+       git add .
+       ```
+    3. **Commit staged changes:**
+       ```bash
+       git commit -m "Your commit message"
+       ```
+    4. **Push commits to GitHub:**
+       ```bash
+       git push -u origin main
+       ```
+    EOF
+    ```
+
+    *Verification:* Run `cat README.md` to ensure the content was written correctly.
+  </Step>
+
+  <Step subtitle="Sync with GitHub" title="Stage, Commit, and Push the New README">
+    Push your updated `README.md` to GitHub:
+
+    ```bash
+    git add README.md
+    git commit -m "Update README with Git learning overview"
+    git push
+    ```
+
+    *Verification:* Refresh `[https://github.com/yunuszoro46-sketch/versionControl](https://github.com/yunuszoro46-sketch/versionControl)` in your browser to view the updated formatted README.
+  </Step>
+</Steps>
+
+<Elicitations message="What would you like to do next?">
+  <Elicitation label="Learn Git Branching" query="How do I create and merge branches in Git?"/>
+  <Elicitation label="Configure .gitignore" query="How do I create a .gitignore file to ignore unwanted files?"/>
+</Elicitations>
